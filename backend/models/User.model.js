@@ -20,6 +20,13 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         default: 'user'
+    },
+    accounts: {
+        type: Map,
+        of: {
+            fees: Number,
+            paidStatus: Boolean
+        }
     }
 }, {timestamps: true})
 
